@@ -5,5 +5,7 @@ class GetWeatherByCountryName {
 
   GetWeatherByCountryName(this.repository);
 
-  execute(String cityName) {}
+  execute(String cityName) {
+    return repository.getWeatherByCityName(cityName);
+  }
 }
