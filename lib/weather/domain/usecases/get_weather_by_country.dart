@@ -1,3 +1,4 @@
+import '../entities/weather.dart';
 import '../repository/base_weather_repository.dart';
 
 class GetWeatherByCountryName {
@@ -5,7 +6,7 @@ class GetWeatherByCountryName {
 
   GetWeatherByCountryName(this.repository);
 
-  execute(String cityName) {
-    return repository.getWeatherByCityName(cityName);
+  Future<Weather> execute(String cityName) async{
+    return await repository.getWeatherByCityName(cityName);
   }
 }
