@@ -1,0 +1,48 @@
+
+
+{
+  "coord": {
+    "lon": 2.3,
+    "lat": 49.9
+  },
+  "weather": [
+    {
+      "id": 803,
+      "main": "Clouds",
+      "description": "broken clouds",
+      "icon": "04n"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 285.17,
+    "feels_like": 284.91,
+    "temp_min": 284.69,
+    "temp_max": 285.7,
+    "pressure": 1016,
+    "humidity": 95,
+    "sea_level": 1016,
+    "grnd_level": 1012
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 3.2,
+    "deg": 267,
+    "gust": 7.36
+  },
+  "clouds": {
+    "all": 67
+  },
+  "dt": 1683747315,
+  "sys": {
+    "type": 2,
+    "id": 2011713,
+    "country": "FR",
+    "sunrise": 1683691992,
+    "sunset": 1683746477
+  },
+  "timezone": 7200,
+  "id": 3037854,
+  "name": "Amiens",
+  "cod": 200
+}
