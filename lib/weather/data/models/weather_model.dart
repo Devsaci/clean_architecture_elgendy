@@ -10,6 +10,12 @@ class WeatherModel extends Weather {
   );
 
   factory WeatherModel.fromJson(Map<String, dynamic> json) {
-    return null!; //This null-check will always throw an exception because the expression will always evaluate to 'null'.
+    return WeatherModel(
+      json["id"],
+      json["name"],
+      json["weather"][0]["main"],
+      json["weather"][0]["description"],
+      json["main"]["pressure"],
+    );
   }
 }
