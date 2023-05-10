@@ -8,4 +8,8 @@ class WeatherModel extends Weather {
     super.description,
     super.pressure,
   );
+
+  factory WeatherModel.fromJson(Map<String, dynamic> json) {
+    return null!; //This null-check will always throw an exception because the expression will always evaluate to 'null'.
+  }
 }
