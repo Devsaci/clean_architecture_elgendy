@@ -1,3 +1,5 @@
+import '../models/weather_model.dart';
+
 abstract class BaseRemoteDataSource {
-  getWeatherByCountryName(String countryName);
+  Future<WeatherModel> getWeatherByCountryName(String countryName);
 }
