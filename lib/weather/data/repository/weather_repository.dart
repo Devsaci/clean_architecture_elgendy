@@ -8,8 +8,7 @@ class WeatherRepository implements BaseWeatherRepository {
   WeatherRepository(this.baseRemoteDataSource);
 
   @override
-  Future<Weather> getWeatherByCityName(String cityName) {
-    // TODO: implement getWeatherByCityName
-    throw UnimplementedError();
+  Future<Weather> getWeatherByCityName(String cityName) async {
+    return (await  baseRemoteDataSource.getWeatherByCountryName(cityName))!;
   }
 }
