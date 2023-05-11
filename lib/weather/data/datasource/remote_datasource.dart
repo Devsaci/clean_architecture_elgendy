@@ -2,6 +2,7 @@
 
 import 'dart:convert';
 
+import 'package:clean_architecture_elgendy/core/utils/constances.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 
@@ -15,7 +16,8 @@ class RemoteDataSource implements BaseRemoteDataSource {
   @override
   Future<WeatherModel?> getWeatherByCountryName(String countryName) async {
     try {
-      var response = await Dio().get('url API');
+      var response = await Dio().get
+        (AppConstance.baseUrl);
       if (kDebugMode) {print(response);}
       return WeatherModel.fromJson(json.decode(response.data));
     } catch (e) {
