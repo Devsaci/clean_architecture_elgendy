@@ -5,5 +5,11 @@ class Weather {
   final String description;
   final int pressure;
 
-  Weather(this.id, this.cityName, this.main, this.description, this.pressure);
+  Weather(
+    this.id,
+    this.cityName,
+    this.main,
+    this.description,
+    this.pressure,
+  );
 }

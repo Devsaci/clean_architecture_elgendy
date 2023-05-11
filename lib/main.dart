@@ -1,6 +1,22 @@
+import 'package:clean_architecture_elgendy/weather/data/datasource/remote_datasource.dart';
+import 'package:clean_architecture_elgendy/weather/data/repository/weather_repository.dart';
+import 'package:clean_architecture_elgendy/weather/domain/entities/weather.dart';
+import 'package:clean_architecture_elgendy/weather/domain/repository/base_weather_repository.dart';
+import 'package:clean_architecture_elgendy/weather/domain/usecases/get_weather_by_country.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  BaseRemoteDataSource baseRemoteDataSource = RemoteDataSource();
+  BaseWeatherRepository baseWeatherRepository =
+  WeatherRepository(baseRemoteDataSource);
+  Weather weather =
+  await GetWeatherByCountryName(baseWeatherRepository).execute("Amiens");
+  if (kDebugMode) {
+    print("************ weather *******************");
+    print(weather.toString());
+    print("************ weather *******************");
+  }
   runApp(const MyApp());
 }
 
