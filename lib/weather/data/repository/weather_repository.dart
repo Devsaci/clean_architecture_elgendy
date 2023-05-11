@@ -2,11 +2,10 @@ import 'package:clean_architecture_elgendy/weather/data/datasource/remote_dataso
 import 'package:clean_architecture_elgendy/weather/domain/entities/weather.dart';
 import 'package:clean_architecture_elgendy/weather/domain/repository/base_weather_repository.dart';
 
-class WeatherRepository implements BaseWeatherRepository{
+class WeatherRepository implements BaseWeatherRepository {
+  final BaseRemoteDataSource baseRemoteDataSource;
 
-  final RemoteDataSource remoteDataSource;
-
-  WeatherRepository(this.remoteDataSource);
+  WeatherRepository(this.baseRemoteDataSource);
 
   @override
   Future<Weather> getWeatherByCityName(String cityName) {
