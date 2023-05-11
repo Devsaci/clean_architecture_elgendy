@@ -17,7 +17,7 @@ class RemoteDataSource implements BaseRemoteDataSource {
   Future<WeatherModel?> getWeatherByCountryName(String countryName) async {
     try {
       var response = await Dio().get
-        (AppConstance.baseUrl);
+        ('${AppConstance.baseUrl}/weather?q=$countryName&appid=apikey');
       if (kDebugMode) {print(response);}
       return WeatherModel.fromJson(json.decode(response.data));
     } catch (e) {
