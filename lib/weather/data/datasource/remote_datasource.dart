@@ -1,1 +1,3 @@
-abstract class BaseRemoteDataSource {}
+abstract class BaseRemoteDataSource {
+  getWeatherByCountryName(String countryName);
+}
