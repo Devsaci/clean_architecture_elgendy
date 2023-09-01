@@ -7,6 +7,7 @@
 # How to deal with the big and medium projects.
 
 # SOLD Principle
+https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/
 
 # Clean Architecture
 
